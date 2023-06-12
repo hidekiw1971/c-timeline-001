@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.timeline {
+    width: 96%;
+    max-width: rem(940);
+    margin: rem(28) auto;
+    border: rem(1) solid #888888;
+}
+
+.timeline-list {
+    padding: rem(40) 0;
+}
+
+.timeline-list-item {
+    display: flex;
+    line-height: 1.5;
+    font-size: rem(16);
+}
+
+.timeline-list-item .date {
+    width: 20%;
+    padding: 0 0 0 rem(20);
+    color: #888888;
+    font-weight: bold;
+}
+
+.timeline-list-item .content {
+    position: relative;
+    width: 80%;
+    padding: 0 rem(20) rem(60) rem(30);
+    border-left: rem(1) solid #aaaaaa;
+}
+
+.timeline-list-item .content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: rem(-10); //widthの半分の値を指定
+    width: rem(20);
+    height: rem(20);
+    background-color: #00c2bc;
+    border-radius: rem(10);
+}
+
+.timeline-figure {
+    filter: blur(rem(5));
+}
